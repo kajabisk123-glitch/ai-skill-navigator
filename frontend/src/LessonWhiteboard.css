@@ -1,0 +1,82 @@
+.lesson-board {
+    margin: 24px 0;
+    padding: 22px;
+    border-radius: 18px;
+    background: #10251f;
+    color: #f0fdf4;
+    border: 3px solid #6b8e75;
+    box-shadow: 0 8px 24px #00000020;
+  }
+  
+  .board-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #86efac;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  
+  .board-content {
+    min-height: 190px;
+  }
+  
+  .board-line {
+    margin: 16px 0;
+    animation: boardWrite 0.5s ease both;
+  }
+  
+  .board-line h3 {
+    color: #fde68a;
+    font-size: 16px;
+  }
+  
+  .board-line p {
+    color: #f0fdf4;
+    line-height: 1.8;
+    white-space: pre-wrap;
+  }
+  
+  .board-cursor {
+    color: #86efac;
+    animation: cursorBlink 0.8s infinite;
+  }
+  
+  .board-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .board-actions button {
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 9px;
+    background: #bbf7d0;
+    color: #14532d;
+    cursor: pointer;
+  }
+  
+  .board-actions button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  @keyframes boardWrite {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes cursorBlink {
+    50% {
+      opacity: 0;
+    }
+  }
